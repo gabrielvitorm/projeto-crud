@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% block conteudo %}
+
+<h1>Lista de Aulas</h1>
+
+<table>
+    <tr>
+        <th>
+            Nome da Aula
+        </th>
+        <th>
+            Descrição da Aula
+        </th>
+        <th>
+            Carga Horária da Aula
+        </th>
+    </tr>
+    <tr>
+        {% for aula in aulas %}
+        <td>
+            {{ aula[0] }}
+        </td>
+        <td>
+            {{ aula[1] }}
+        </td>
+        <td>
+            {{ aula[2] }} Horas
+        </td>
+        {% endfor %}
+    </tr>
+  </table>
+
+{% endblock %}  
