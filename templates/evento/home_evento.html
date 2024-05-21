@@ -25,6 +25,10 @@
         <td>
             {{ evento[2] }}
         </td>
+        <td>
+            <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
+            <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
+        </td>
         {% endfor %}
     </tr>
   </table>

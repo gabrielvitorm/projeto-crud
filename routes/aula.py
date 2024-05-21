@@ -25,15 +25,24 @@ def nova_aula():
 
 @aula_route.route('/update/<int:line_number>', methods=['GET', 'POST'])
 def update_aula(line_number):
+    cursos = []
     with open(AULAS_FILE, 'r') as file:
-        aula = file.readlines()
+        cursos = [line.strip().split('|') for line in file.readlines()]
     if request.method == 'POST':
-        aula[line_number] = request.form['content'] + '\n'
+        cursos[line_number] = [request.form['title'], request.form['description'], request.form['hours']]
         with open(AULAS_FILE, 'w') as file:
-            file.writelines(aula)
+            for curso in cursos:
+                file.write('|'.join(curso) + '\n')
         return redirect(url_for('aula.home_page'))
-    return render_template('aula/update_aula.html', line_number=line_number, content=aula[line_number].strip())    
+    return render_template('aula/update_aula.html', curso=cursos[line_number], line_number=line_number)
 
 @aula_route.route('/delete/<int:line_number>', methods=['GET', 'POST'])
-def delete_aula():
-    pass
+def delete_aula(line_number):
+    cursos = []
+    with open(AULAS_FILE, 'r') as file:
+        cursos = [line.strip().split('|') for line in file.readlines()]
+    cursos.pop(line_number)
+    with open(AULAS_FILE, 'w') as file:
+        for curso in cursos:
+            file.write('|'.join(curso) + '\n')
+    return redirect(url_for('aula.home_page'))

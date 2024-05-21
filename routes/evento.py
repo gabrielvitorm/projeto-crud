@@ -21,3 +21,27 @@ def novo_evento():
             file.write(evento)
         return redirect(url_for('evento.home_page'))
     return render_template('evento/criar_evento.html')
+
+@evento_route.route('/update/<int:line_number>', methods=['GET', 'POST'])
+def update_evento(line_number):
+    eventos = []
+    with open(DATA_FILE, 'r') as file:
+        eventos = [line.strip().split('|') for line in file.readlines]
+    if request.method == 'POST':
+        eventos[line_number] = [request.form['title'], request.form['description'], request.form['date']]
+        with open (DATA_FILE, 'w') as file:
+            for evento in eventos:
+                file.write('|'.join(evento) + '\n')
+        return redirect(url_for('evento.home_page'))
+    return render_template('evento/update_evento.html', evento=eventos[line_number], line_number=line_number)
+
+@evento_route.route('/delete/<int:line_number>', methods=['GET', 'POST'])
+def delete_evento(line_number):
+    eventos = []
+    with open(DATA_FILE, 'r') as file:
+        eventos = [line.strip().split('|') for line in file.readlines]
+    eventos.pop(line_number)
+    with open (DATA_FILE, 'w') as file:
+            for evento in eventos:
+                file.write('|'.join(evento) + '\n')
+    return redirect(url_for('evento.home_page'))

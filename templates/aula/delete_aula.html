@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h1>Deletar Aula</h1>
+    <p>Tem certeza de que deseja deletar a aula: <strong>{{ curso[0] }}</strong>?</p>
+    <form method="POST">
+        <button type="submit">Confirmar Deleção</button>
+        <a href="{{ url_for('aula.home_page') }}">Cancelar</a>
+    </form>
+
+{% endblock %}
