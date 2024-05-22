@@ -1,10 +1,12 @@
 {% extends 'base.html'%}
 {% block conteudo %}
+<!-- Bloco de conteúdo que será inserido na base.html -->
 
 <div class="container">
     <section class="tab-aula">
       <div>
         <h1>Lista de Aulas</h1>
+        <!-- Tabela para exibir a lista de aulas -->
         <table>
           <thead>
             <tr>
@@ -15,12 +17,14 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Loop para percorrer todas as aulas e exibi-las na tabela -->
             {% for aula in aulas %}
             <tr>
-              <td>{{ aula[0] }}</td>
-              <td>{{ aula[1] }}</td>
-              <td>{{ aula[2] }} Horas</td>
+              <td>{{ aula[0] }}</td> <!-- Nome da aula -->
+              <td>{{ aula[1] }}</td> <!-- Descrição da aula -->
+              <td>{{ aula[2] }} Horas</td> <!-- Carga horária da aula -->
               <td>
+                <!-- Links para atualizar e deletar cada aula -->
                 <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Update</a>
                 <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Delete</a>
               </td>
@@ -34,6 +38,7 @@
     <section class="tab-evento">
       <div>
         <h1>Lista de Eventos</h1>
+        <!-- Tabela para exibir a lista de eventos -->
         <table>
           <thead>
             <tr>
@@ -44,12 +49,14 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Loop para percorrer todos os eventos e exibi-los na tabela -->
             {% for evento in eventos %}
             <tr>
-              <td>{{ evento[0] }}</td>
-              <td>{{ evento[1] }}</td>
-              <td>{{ evento[2] }}</td>
+              <td>{{ evento[0] }}</td> <!-- Nome do evento -->
+              <td>{{ evento[1] }}</td> <!-- Descrição do evento -->
+              <td>{{ evento[2] }}</td> <!-- Data do evento -->
               <td>
+                <!-- Links para atualizar e deletar cada evento -->
                 <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
                 <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
               </td>
@@ -62,3 +69,4 @@
   </div>
 
 {% endblock %}
+<!-- Fim do bloco de conteúdo -->

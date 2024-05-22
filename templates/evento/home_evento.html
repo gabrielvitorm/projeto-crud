@@ -1,10 +1,12 @@
 {% extends 'base.html'%}
 {% block conteudo %}
+<!-- Bloco de conteúdo que será inserido na base.html -->
 
 <div class="container">
     <section class="tab-evento">
         <div>
             <h1>Lista de Eventos</h1>
+            <!-- Tabela para exibir a lista de eventos -->
             <table>
                 <thead>
                     <tr>
@@ -15,12 +17,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Loop para percorrer todos os eventos e exibi-los na tabela -->
                     {% for evento in eventos %}
                     <tr>
-                        <td>{{ evento[0] }}</td>
-                        <td>{{ evento[1] }}</td>
-                        <td>{{ evento[2] }}</td>
+                        <td>{{ evento[0] }}</td> <!-- Nome do evento -->
+                        <td>{{ evento[1] }}</td> <!-- Descrição do evento -->
+                        <td>{{ evento[2] }}</td> <!-- Data do evento -->
                         <td>
+                            <!-- Links para atualizar e deletar cada evento -->
                             <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
                             <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
                         </td>
@@ -33,3 +37,4 @@
 </div>
 
 {% endblock %}
+<!-- Fim do bloco de conteúdo -->

@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+<!-- Bloco de conteúdo que será inserido na base.html -->
 
 <h1>Deletar Evento</h1>
-    <p>Tem certeza de que deseja deletar a aula: <strong>{{ evento[0] }}</strong>?</p>
+<!-- Mensagem de confirmação para deletar o evento -->
+    <p>Tem certeza de que deseja deletar o evento: <strong>{{ evento[0] }}</strong>?</p>
+    <!-- Formulário para confirmar a deleção do evento -->
     <form method="POST">
         <button type="submit">Confirmar Deleção</button>
+        <!-- Link para cancelar e voltar para a página de eventos -->
         <a href="{{ url_for('evento.home_page_evento') }}">Cancelar</a>
     </form>
 
 {% endblock %}
+<!-- Fim do bloco de conteúdo -->

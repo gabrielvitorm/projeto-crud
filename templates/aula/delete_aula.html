@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+<!-- Bloco de conteúdo que será inserido na base.html -->
 
 <h1>Deletar Aula</h1>
+<!-- Mensagem de confirmação para deletar a aula -->
     <p>Tem certeza de que deseja deletar a aula: <strong>{{ curso[0] }}</strong>?</p>
+    <!-- Formulário para confirmar a deleção -->
     <form method="POST">
         <button type="submit">Confirmar Deleção</button>
+        <!-- Link para cancelar a deleção e voltar à página de visualização das aulas -->
         <a href="{{ url_for('aula.home_page') }}">Cancelar</a>
     </form>
 
 {% endblock %}
+<!-- Fim do bloco de conteúdo -->

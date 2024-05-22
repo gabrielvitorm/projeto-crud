@@ -1,45 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestão Institucional</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <div>
-            <div class="btn-home">
-              <a href="{{url_for('home.home')}}" class="btn-home-2">Home</a>
-            </div>
-            <div class="btn-nav">
-              <ul class="list-nav">
-                <li>
-                  <a href="{{url_for('aula.home_page')}}">Visualizar Aulas</a>
-                </li>
-                <li>
-                  <a href="{{url_for('aula.nova_aula')}}">Criar Aula</a>
-                </li>
-                <li>
-                  <a href="{{url_for('evento.home_page_evento')}}">Visualizar Eventos</a>
-                </li>
-                <li>
-                  <a href="{{url_for('evento.novo_evento')}}">Criar Evento</a>
-                </li>
-              </ul>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestão Institucional</title>
+  <!-- Importa o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div>
+          <!-- Botão Home que redireciona para a rota home.home -->
+          <div class="btn-home">
+            <a href="{{url_for('home.home')}}" class="btn-home-2">Home</a>
           </div>
-      </div>
-    </header>
-    {% block conteudo %}
+          <!-- Lista de navegação com links para diferentes rotas -->
+          <div class="btn-nav">
+            <ul class="list-nav">
+              <!-- Link para visualizar aulas -->
+              <li>
+                <a href="{{url_for('aula.home_page')}}">Visualizar Aulas</a>
+              </li>
+              <!-- Link para criar aula -->
+              <li>
+                <a href="{{url_for('aula.nova_aula')}}">Criar Aula</a>
+              </li>
+              <!-- Link para visualizar eventos -->
+              <li>
+                <a href="{{url_for('evento.home_page_evento')}}">Visualizar Eventos</a>
+              </li>
+              <!-- Link para criar evento -->
+              <li>
+                <a href="{{url_for('evento.novo_evento')}}">Criar Evento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Conteúdo dinâmico que será preenchido pelas templates filhas -->
+  {% block conteudo %}
 
-    {% endblock %}
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Gabriel Vitor. Todos os direitos reservados.</p>
-      </div>
-    </footer>
-  </body>
+  {% endblock %}
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <!-- Texto de direitos autorais -->
+      <p>&copy; 2024 Gabriel Vitor. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
 </html>
