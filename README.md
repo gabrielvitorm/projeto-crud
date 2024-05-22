@@ -4,19 +4,19 @@ Este é um projeto simples de gestão de aulas e eventos desenvolvido com Flask.
 
 ## Funcionalidades
 
-Visualizar, criar, atualizar e deletar aulas
-Visualizar, criar, atualizar e deletar eventos
+- Visualizar, criar, atualizar e deletar aulas
+- Visualizar, criar, atualizar e deletar eventos
 
 ## Intruções para Instalar o Flask
 
 # Crie um ambiente virtual e ative-o:
 
-python -m venv venv
-use .\venv\Scripts\activate
+- python -m venv venv
+- use .\venv\Scripts\activate
 
 # Instale as dependências:
 
-pip install flask
+- pip install flask
 
 # Estrutura do Projeto
 - app.py: Arquivo principal que inicializa a aplicação Flask e registra os Blueprints.
