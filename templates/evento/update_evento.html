@@ -2,21 +2,23 @@
 {% block conteudo %}
 <!-- Bloco de conteúdo que será inserido na base.html -->
 
-<h1>Atualizar o evento</h1>
-<!-- Formulário para atualizar um evento -->
-<form action="{{ url_for('evento.update_evento', line_number=line_number) }}" method="post">
-    <label for="title">Nome do Evento</label>
-    <!-- Campo para inserir o nome do evento -->
-    <input type="text" id="title" name="title" value="{{ evento[0] }}"  required>
-    <label for="description">Descrição do Evento</label>
-    <!-- Campo para inserir a descrição do evento -->
-    <input type="text" id="description" name="description" value="{{ evento[1] }}" required>
-    <label for="date">Data do Evento</label>
-    <!-- Campo para inserir a data do evento -->
-    <input type="date" id="date" name="date" value="{{ evento[2] }}" required>
-    <!-- Botão para enviar o formulário e atualizar o evento -->
-    <button type="submit">Atualizar Evento</button>
-</form>
+<div class="container">
+    <h1 class="h1-form">Atualizar o evento</h1>
+    <!-- Formulário para atualizar um evento -->
+    <form class="create-class-form" action="{{ url_for('evento.update_evento', line_number=line_number) }}" method="post">
+        <label for="title">Nome do Evento</label>
+        <!-- Campo para inserir o nome do evento -->
+        <input type="text" id="title" name="title" value="{{ evento[0] }}" required>
+        <label for="description">Descrição do Evento</label>
+        <!-- Campo para inserir a descrição do evento -->
+        <input type="text" id="description" name="description" value="{{ evento[1] }}" required>
+        <label for="date">Data do Evento</label>
+        <!-- Campo para inserir a data do evento -->
+        <input type="date" id="date" name="date" value="{{ evento[2] }}" required>
+        <!-- Botão para enviar o formulário e atualizar o evento -->
+        <button type="submit">Atualizar Evento</button>
+    </form>
+</div>
 
 {% endblock %}
 <!-- Fim do bloco de conteúdo -->

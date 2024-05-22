@@ -2,21 +2,22 @@
 {% block conteudo %}
 <!-- Bloco de conteúdo que será inserido na base.html -->
 
-<h1>Criar Aulas</h1>
 <!-- Formulário para atualizar uma aula -->
-<form action="{{ url_for('aula.update_aula', line_number=line_number) }}" method="post">
-    <label for="title">Nome da Aula</label>
-    <!-- Campo para inserir o nome da aula, com valor pré-definido se estiver atualizando -->
-    <input type="text" id="title" name="title" value="{{ curso[0] }}" required>
-    <label for="description">Descrição da Aula</label>
-    <!-- Campo para inserir a descrição da aula, com valor pré-definido se estiver atualizando -->
-    <input type="text" id="description" name="description" value="{{ curso[1] }}" required>
-    <label for="hours">Carga Horária</label>
-    <!-- Campo para inserir a carga horária da aula, com valor pré-definido se estiver atualizando -->
-    <input type="number" id="hours" name="hours" value="{{ curso[2] }}" required>
-    <!-- Botão para enviar o formulário e atualizar a aula -->
-    <button type="submit">Atualizar Aula</button>
-</form>
-
+<div class="container">
+    <h1 class="h1-form">Criar Aulas</h1>
+    <form class="create-class-form" action="{{ url_for('aula.update_aula', line_number=line_number) }}" method="post">
+        <label for="title">Nome da Aula</label>
+        <!-- Campo para inserir o nome da aula, com valor pré-definido se estiver atualizando -->
+        <input type="text" id="title" name="title" value="{{ curso[0] }}" required>
+        <label for="description">Descrição da Aula</label>
+        <!-- Campo para inserir a descrição da aula, com valor pré-definido se estiver atualizando -->
+        <input type="text" id="description" name="description" value="{{ curso[1] }}" required>
+        <label for="hours">Carga Horária</label>
+        <!-- Campo para inserir a carga horária da aula, com valor pré-definido se estiver atualizando -->
+        <input type="number" id="hours" name="hours" value="{{ curso[2] }}" required>
+        <!-- Botão para enviar o formulário e atualizar a aula -->
+        <button type="submit">Atualizar Aula</button>
+    </form>
+</div>
 {% endblock %}
 <!-- Fim do bloco de conteúdo -->
