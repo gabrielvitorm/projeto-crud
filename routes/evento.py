@@ -39,7 +39,7 @@ def update_evento(line_number):
 def delete_evento(line_number):
     eventos = []
     with open(DATA_FILE, 'r') as file:
-        eventos = [line.strip().split('|') for line in file.readlines]
+        eventos = [line.strip().split('|') for line in file.readlines()]
     eventos.pop(line_number)
     with open (DATA_FILE, 'w') as file:
             for evento in eventos:

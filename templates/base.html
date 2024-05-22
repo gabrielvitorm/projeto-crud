@@ -8,32 +8,38 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div>
-          <a href="{{url_for('home.home')}}">Home</a>
+      <div class="container">
+        <nav>
           <div>
-            <ul>
-              <li>
-                <a href="{{url_for('aula.home_page')}}">Visualizar Aulas</a>
-              </li>
-              <li>
-                <a href="{{url_for('aula.nova_aula')}}">Criar Aula</a>
-              </li>
-              <li>
-                <a href="{{url_for('evento.home_page_evento')}}">Visualizar Eventos</a>
-              </li>
-              <li>
-                <a href="{{url_for('evento.novo_evento')}}">Criar Evento</a>
-              </li>
-            </ul>
+            <div class="btn-home">
+              <a href="{{url_for('home.home')}}" class="btn-home-2">Home</a>
+            </div>
+            <div class="btn-nav">
+              <ul class="list-nav">
+                <li>
+                  <a href="{{url_for('aula.home_page')}}">Visualizar Aulas</a>
+                </li>
+                <li>
+                  <a href="{{url_for('aula.nova_aula')}}">Criar Aula</a>
+                </li>
+                <li>
+                  <a href="{{url_for('evento.home_page_evento')}}">Visualizar Eventos</a>
+                </li>
+                <li>
+                  <a href="{{url_for('evento.novo_evento')}}">Criar Evento</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+      </div>
     </header>
     {% block conteudo %}
 
     {% endblock %}
     <footer>
-      <h2>Gabriel Vitor @ 2024</h2>
+      <div class="container">
+        <p>&copy; 2024 Gabriel Vitor. Todos os direitos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>

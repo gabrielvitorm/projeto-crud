@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-<h1>Criar Aulas</h1>
-<form method="post">
-    <label for="title">Nome da Aula</label>
-    <input type="text" id="title" name="title" required>
-    <label for="description">Descrição da Aula</label>
-    <input type="text" id="description" name="description" required>
-    <label for="hours">Carga Horária</label>
-    <input type="number" id="hours" name="hours" required>
-    <button type="submit">Criar Aula</button>
-</form>
+<div class="container">
+    <h1 class="h1-form">Criar Aulas</h1>
+    <form method="post" class="create-class-form">
+        <label for="title">Nome da Aula</label>
+        <input type="text" id="title" name="title" required>
+        <label for="description">Descrição da Aula</label>
+        <input type="text" id="description" name="description" required>
+        <label for="hours">Carga Horária</label>
+        <input type="number" id="hours" name="hours" required>
+        <button type="submit">Criar Aula</button>
+    </form>
+</div>
 
 {% endblock %}

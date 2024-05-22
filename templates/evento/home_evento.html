@@ -1,36 +1,35 @@
 {% extends 'base.html'%}
 {% block conteudo %}
 
-<h1>Home Evento</h1>
-<table>
-    <tr>
-        <th>
-            Nome do Evento
-        </th>
-        <th>
-            Descrição do Evento
-        </th>
-        <th>
-            Data do Evento
-        </th>
-    </tr>
-    <tr>
-        {% for evento in eventos %}
-        <td>
-            {{ evento[0] }}
-        </td>
-        <td>
-            {{ evento[1] }}
-        </td>
-        <td>
-            {{ evento[2] }}
-        </td>
-        <td>
-            <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
-            <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
-        </td>
-        {% endfor %}
-    </tr>
-  </table>
+<div class="container">
+    <section class="tab-evento">
+        <div>
+            <h1>Lista de Eventos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Evento</th>
+                        <th>Descrição do Evento</th>
+                        <th>Data do Evento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for evento in eventos %}
+                    <tr>
+                        <td>{{ evento[0] }}</td>
+                        <td>{{ evento[1] }}</td>
+                        <td>{{ evento[2] }}</td>
+                        <td>
+                            <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
+                            <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
 
 {% endblock %}

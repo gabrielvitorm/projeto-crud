@@ -1,105 +1,178 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-color: #4CAF50;
-    padding: 10px 0;
-    text-align: center;
-    color: white;
-    font-size: 24px;
+    background-color: #333;
+    padding: 10px 20px;
+    height: 50px;
+    align-content: center;
 }
 
-nav a {
-    color: white;
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-home {
+    margin-right: auto;
+}
+
+.btn-home-2 {
+    color: #ddd;
+    font-size: 20px;
     text-decoration: none;
-    padding: 10px;
 }
 
-nav a:hover {
-    background-color: #45a049;
+.btn-nav {
+    display: flex;
 }
 
-table {
+.list-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-nav li {
+    margin-left: 20px;
+}
+
+.list-nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.list-nav a:hover {
+    background-color: #9a9a9a;
+}
+
+section {
+    padding: 20px;
+    margin: 80px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-table th, table td {
-    padding: 12px;
+section th,
+section td {
+    padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-table th {
-    background-color: #4CAF50;
+section th {
+    background-color: #007BFF;
     color: white;
 }
 
-table tr:nth-child(even) {
+section tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-table tr:hover {
-    background-color: #ddd;
-}
-
-.action-links a {
-    margin-right: 10px;
+section a {
+    color: #007BFF;
     text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.action-links a:hover {
-    text-decoration: underline;
-    color: #45a049;
+section a:hover {
+    background-color: #007BFF;
+    color: white;
 }
 
-h1, h2 {
-    color: #333;
+.tab-aula {
+    background-color: #e9ecef;
 }
 
-main {
-    background-color: white;
+.tab-evento {
+    background-color: #f8f9fa;
+}
+
+footer {
+    color: #ddd;
+    background-color: #333;
+    padding: 10px 20px;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+.create-class-form {
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-form input[type="text"], form input[type="number"], form input[type="date"] {
-    padding: 10px;
+.create-class-form label {
+    display: block;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-weight: bold;
+}
+
+.create-class-form input {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
-form button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+.create-class-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #45a049;
+.create-class-form button:hover {
+    background-color: #0056b3;
+}
+
+.h1-form{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

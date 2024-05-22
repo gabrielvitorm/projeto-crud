@@ -1,37 +1,35 @@
 {% extends 'base.html'%}
 {% block conteudo %}
 
-<h1>Lista de Aulas</h1>
-
-<table>
-    <tr>
-        <th>
-            Nome da Aula
-        </th>
-        <th>
-            Descrição da Aula
-        </th>
-        <th>
-            Carga Horária da Aula
-        </th>
-    </tr>
-    <tr>
-        {% for aula in aulas %}
-        <td>
-            {{ aula[0] }}
-        </td>
-        <td>
-            {{ aula[1] }}
-        </td>
-        <td>
-            {{ aula[2] }} Horas
-        </td>
-        <td>
-            <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Update</a>
-            <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Delete</a>
-        </td>
-        {% endfor %}
-    </tr>
-  </table>
+<div class="container">
+    <section class="tab-aula">
+      <div>
+        <h1>Lista de Aulas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome da Aula</th>
+              <th>Descrição da Aula</th>
+              <th>Carga Horária da Aula</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for aula in aulas %}
+            <tr>
+              <td>{{ aula[0] }}</td>
+              <td>{{ aula[1] }}</td>
+              <td>{{ aula[2] }} Horas</td>
+              <td>
+                <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Update</a>
+                <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Delete</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+</div>    
 
 {% endblock %}  
