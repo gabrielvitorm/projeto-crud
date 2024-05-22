@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask
 from routes.aula import aula_route
 from routes.evento import evento_route
 from routes.home import home_route

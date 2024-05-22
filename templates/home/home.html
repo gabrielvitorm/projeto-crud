@@ -1,6 +1,76 @@
 {% extends 'base.html'%}
 {% block conteudo %}
 
-<h1>Página Principal</h1>
+<section>
+    <div>
+        <h1>Lista de Aulas</h1>
+        <table>
+            <tr>
+                <th>
+                    Nome da Aula
+                </th>
+                <th>
+                    Descrição da Aula
+                </th>
+                <th>
+                    Carga Horária da Aula
+                </th>
+            </tr>
+            <tr>
+                {% for aula in aulas %}
+                <td>
+                    {{ aula[0] }}
+                </td>
+                <td>
+                    {{ aula[1] }}
+                </td>
+                <td>
+                    {{ aula[2] }} Horas
+                </td>
+                <td>
+                    <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Update</a>
+                    <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Delete</a>
+                </td>
+                {% endfor %}
+            </tr>
+          </table>
+    </div> 
+</section>
+
+<section>
+    <div>
+        <h1>Home Evento</h1>
+    <table>
+        <tr>
+            <th>
+                Nome do Evento
+            </th>
+            <th>
+                Descrição do Evento
+            </th>
+            <th>
+                Data do Evento
+            </th>
+        </tr>
+        <tr>
+            {% for evento in eventos %}
+            <td>
+                {{ evento[0] }}
+            </td>
+            <td>
+                {{ evento[1] }}
+            </td>
+            <td>
+                {{ evento[2] }}
+            </td>
+            <td>
+                <a href="{{ url_for('evento.update_evento', line_number=loop.index0) }}">Atualizar</a>
+                <a href="{{ url_for('evento.delete_evento', line_number=loop.index0) }}">Deletar</a>
+            </td>
+            {% endfor %}
+        </tr>
+      </table>
+    </div>
+</section>
 
 {% endblock %}
