@@ -26,8 +26,8 @@
               <td>{{ aula[2] }} Horas</td> <!-- Carga horária da aula -->
               <td>
                 <!-- Links para atualizar e deletar cada aula -->
-                <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Update</a>
-                <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Delete</a>
+                <a href="{{ url_for('aula.update_aula', line_number=loop.index0) }}">Atualizar</a>
+                <a href="{{ url_for('aula.delete_aula', line_number=loop.index0) }}">Deletar</a>
               </td>
             </tr>
             {% endfor %}
