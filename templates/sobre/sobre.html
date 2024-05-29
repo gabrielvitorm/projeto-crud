@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<section class="about-pag-title">
+    <div class="about-title">
+        <h1>Conheça quem desenvolveu esse projeto</h1>
+        <h2>Esse foi um projeto realizado por um grupo de 4 pessoas, a criação do crud com o flask, foi proposto como projeto final para as cadeiras de Introdução a Programação e Tópicos Essenciais, ministradas pelo professor Messias!</h2>
+    </div>
+</section>
+<section class="about-pag-img">
+    <div class="about-img">
+        <img src="{{url_for('static', filename='img/')}}" alt="Gabriel Vitor">
+        <h1>Gabriel Vitor</h1>
+    </div>
+</section>
+
+{% endblock %}
