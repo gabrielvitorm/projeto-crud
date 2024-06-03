@@ -1,2 +1,2 @@
-Evento de Python|Aprendas as atualizações de python|2024-05-17
-Palestra sobre I.A GDG João Pessoa|Palestra sobre I.A GDG João Pessoa Palestra sobre I.A GDG João Pessoa |2024-05-24
+Palestra GDG - Uniesp|Palestra sobre as tecnologias e avanços das I.A's generativas|2024-05-24
+Python Nordeste|Encontro anual de Python no Nordeste|2024-08-09

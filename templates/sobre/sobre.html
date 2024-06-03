@@ -1,17 +1,46 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-
-<section class="about-pag-title">
-    <div class="about-title">
-        <h1>Conheça quem desenvolveu esse projeto</h1>
-        <h2>Esse foi um projeto realizado por um grupo de 4 pessoas, a criação do crud com o flask, foi proposto como projeto final para as cadeiras de Introdução a Programação e Tópicos Essenciais, ministradas pelo professor Messias!</h2>
-    </div>
+<div class="container">
+<section class="section-content">
+        <div class="page-title">
+            <h1>Conheça quem desenvolveu esse projeto</h1>
+            <p>Esse foi um projeto realizado por um grupo de 4 pessoas, a criação do CRUD com o Flask, foi proposto como projeto final para as cadeiras de Introdução à Programação e Tópicos Essenciais, ministradas pelo professor Messias!</p>
+        </div>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/gv.jpeg') }}" alt="Gabriel Vitor">
+                <h3>Gabriel Vitor</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/gabrielvitorm" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/gabrielvitorm" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/pedro.jpeg') }}" alt="Pedro Queiroga">
+                <h3>Pedro Queiroga</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/member2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/PedroQueiroga9" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/caua.jpeg') }}" alt="Cauã Crispim">
+                <h3>Cauã Crispim</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/caua-crispim" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/cauacrispimv" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/marcelo.jpeg') }}" alt="Marcelo Nóbrega">
+                <h3>Marcelo Nóbrega</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/marcelo-nóbrega-8046752ba" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/MarceloNobrega29" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
 </section>
-<section class="about-pag-img">
-    <div class="about-img">
-        <img src="{{url_for('static', filename='img/')}}" alt="Gabriel Vitor">
-        <h1>Gabriel Vitor</h1>
-    </div>
-</section>
+</div>
 
 {% endblock %}

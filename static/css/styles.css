@@ -4,6 +4,17 @@
     list-style: none;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -17,6 +28,7 @@ header {
     width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+    flex: 1; 
 }
 
 nav>div {
@@ -175,4 +187,61 @@ footer p {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.page-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-members p{
+    font-size: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+.social-links a i {
+    margin-right: 5px;
+}
+
+.social-links a:hover {
+    color: #0056b3;
 }

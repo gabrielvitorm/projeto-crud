@@ -1,1 +1,3 @@
-Introdução a Programaçãoxxxxx|Aprenda lógica de programação do zero|30
+Introdução a Programação|Aulas Introdutórias sobre programação|60
+Front-End|Aulas Introdutórias sobre Front-End|60
+Tópicos Essenciais para Programação|Aulas que abordam questões além do código|60
